@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../app/globals.css";
-import { Providers as NextUIProvider } from "./providers";
+import { Providers as NextUIProvider } from "../app/lib/providers";
 import Header from "../app/components/Header";
 import Head from "next/head";
 
