@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-color: #f0efe8;
+  --primary-color: #bcb4a4;
+  --secondary-color: #313131;
+  --tertiary-color: #e5e3da;
+  --quaternary-color: #331313;
+  --quinary-color: #847967;
+}
+
+@font-face {
+  font-family: "Golden Graph";
+  src: url("../public/font/Golden\ Graph.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT-Ultra";
+  src: url("../public/font/GT-Ultra-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT-Ultra";
+  src: url("../public/font/GT-Ultra-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT-Ultra";
+  src: url("../public/font/GT-Ultra-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root,
+html,
+body {
+  color: var(--primary-color);
+  background-color: var(--main-color);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "GT-Ultra";
+}
+
+.main-background {
+  background: var(--main-color);
+}
+
+.primary-background {
+  background: var(--primary-color);
+}
+
+.tertiary-background {
+  background: var(--tertiary-color);
+}
+
+.quaternary-background {
+  background-color: var(--quaternary-color);
+}
+
+.quaternary-background:hover {
+  background-color: var(--quaternary-color);
+}
+
+.main-text {
+  color: var(--main-color);
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+.secondary-text {
+  color: var(--secondary-color);
+}
+
+.quaternary-text {
+  color: var(--quaternary-color);
+}
+
+.quinary-text {
+  color: var(--quinary-color);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  text-align: center;
+  word-break: keep-all;
+}
+
+textarea {
+  text-align: left;
+  overflow: hidden;
+  resize: none;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  height: auto;
+}
+
+.editable-div {
+  text-wrap: break-all;
+  line-height: 1.5em;
+  max-height: 3em;
+  overflow: hidden;
+}
+
+.editable-div.placeholder::before {
+  content: attr(data-placeholder);
+  /* color: #aaa; */
+  pointer-events: none;
+  display: block; /* Ensure it takes up space */
+  text-align: center;
+}
+
+.editable-div:focus {
+  border: none;
+  outline: none;
+}
